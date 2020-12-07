@@ -2,8 +2,7 @@
 	
 	use Illuminate\Http\Request;
 	use Illuminate\Support\Facades\Route;
-	use App\Article;
-	use App\User;
+
 	
 	/*
 		|--------------------------------------------------------------------------
@@ -21,12 +20,7 @@
 	});
 	
 	
-	Route::get('/articles', function(){
-		return Article::all()->toArray();
-		
-	});
-	
-	Route::get('/users', function(){
-		return User::all()->toArray();
-		
-	});
+	Route::get('/articles','ArticleController@index')->name('articles');
+	Route::get('/articles/{id}','ArticleController@show')->name('article');
+	Route::get('/users','UserController@index')->name('users');
+	Route::get('/users/{id}','UserController@show')->name('user');
