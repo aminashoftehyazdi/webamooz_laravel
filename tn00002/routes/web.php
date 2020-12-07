@@ -14,4 +14,7 @@
 		return view('welcome');
 	});
 	
+	
+	
+	
 ?>

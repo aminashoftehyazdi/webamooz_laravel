@@ -17,4 +17,12 @@
 				return response(['message'=>'Not Found Resource'], 404);
 			}
 		}
-	}			
+		public function store(Request $request){
+			$user = User::create([
+			'name'=>$request->name,
+			'email'=>$request->email,
+			'password'=>bcrypt($request->password)
+			]);
+			return response($user,201);
+		}
+	}					

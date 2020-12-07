@@ -2,7 +2,7 @@
 	
 	use Illuminate\Http\Request;
 	use Illuminate\Support\Facades\Route;
-
+	
 	
 	/*
 		|--------------------------------------------------------------------------
@@ -20,7 +20,10 @@
 	});
 	
 	
-	Route::get('/articles','ArticleController@index')->name('articles');
-	Route::get('/articles/{id}','ArticleController@show')->name('article');
-	Route::get('/users','UserController@index')->name('users');
-	Route::get('/users/{id}','UserController@show')->name('user');
+	Route::get('/articles','ArticleController@index');
+	Route::get('/articles/{id}','ArticleController@show');
+	Route::post('/articles','ArticleController@store');	
+	////////////////////////////////////////////////////
+	Route::get('/users','UserController@index');
+	Route::get('/users/{id}','UserController@show');
+	Route::post('/users','UserController@store');
