@@ -42,4 +42,10 @@
 			return $this->hasMany(Article::class);
 			
 		}
+		
+		public function myGenerateToken(){ // a method that we create 
+			
+			return 'asdasdfasdf';
+			
+		}
 	}
