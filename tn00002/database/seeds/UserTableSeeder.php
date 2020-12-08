@@ -20,31 +20,31 @@
 			'name'=>'user1',
 			'email'=>'user1@webamooz.net',
 			'password'=>bcrypt('password'),
-			'token'=>null,
+			'api_token'=>null,
 			]);
 			User::create([
 			'name'=>'user2',
 			'email'=>'user2@webamooz.net',
 			'password'=>bcrypt('password'),
-			'token'=>null,
+			'api_token'=>null,
 			]);
 			User::create([
 			'name'=>'user3',
 			'email'=>'user3@webamooz.net',
 			'password'=>bcrypt('password'),
-			'token'=>null,
+			'api_token'=>null,
 			]);
 			User::create([
 			'name'=>'user4',
 			'email'=>'user4@webamooz.net',
 			'password'=>bcrypt('password'),
-			'token'=>null,
+			'api_token'=>null,
 			]);
 			User::create([
 			'name'=>'user5',
 			'email'=>'user5@webamooz.net',
 			'password'=>bcrypt('password'),
-			'token'=>null,
+			'api_token'=>null,
 			]);
 			
 		}

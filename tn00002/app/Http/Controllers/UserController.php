@@ -5,6 +5,9 @@
 	class UserController extends Controller
 	{
 		public function index(Request $request){
+	
+		// for find who is login
+		//dd($request->guard('api')->user());
 			$articles = User::all()->toArray();
 			return $articles;
 		}

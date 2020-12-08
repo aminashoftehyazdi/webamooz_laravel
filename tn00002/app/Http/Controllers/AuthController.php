@@ -18,8 +18,10 @@
 			'password'=>$request->password
 			]);
 			if(auth()->check()){
-				//return auth()->user();
-				return response(['token'=>auth()->user()->myGenerateToken()],200); 
+				/* step 1
+				return auth()->user();
+				*/
+				return response(['api_token'=>auth()->user()->myGenerateToken()],200); 
 			}
 			return response(['error'=>'credential is incorrect'],401);
 		}

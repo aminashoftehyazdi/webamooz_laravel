@@ -5,6 +5,8 @@
 	use Illuminate\Contracts\Auth\MustVerifyEmail;
 	use Illuminate\Foundation\Auth\User as Authenticatable;
 	use Illuminate\Notifications\Notifiable;
+	use Illuminate\Support\Str;
+
 	
 	class User extends Authenticatable
 	{
@@ -16,16 +18,16 @@
 			* @var array
 		*/
 		protected $fillable = [
-        'name', 'email', 'password', 'token'
+        'name', 'email', 'password', 'api_token'
 		];
-		
+		 
 		/**
 			* The attributes that should be hidden for arrays.
 			*
 			* @var array
 		*/
 		protected $hidden = [
-        'password', 'remember_token', 'token', 'email_verified_at'
+        'password', 'remember_token', 'api_token', 'email_verified_at'
 		];
 		
 		/**
@@ -44,8 +46,14 @@
 		}
 		
 		public function myGenerateToken(){ // a method that we create 
-			
+			/* step 1
 			return 'asdasdfasdf';
+			*/
+		
+			$token = Str::random(50); // ????? how can check it is unique in table
+			$this->api_token = $token;
+			$this->save();
+			return $token;
 			
 		}
 	}
